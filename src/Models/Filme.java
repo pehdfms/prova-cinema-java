@@ -1,18 +1,18 @@
 package Models;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class Filme {
     private String nome;
     private long id;
-    private List<Categoria> categorias;
+    private ArrayList<Categoria> categorias = new ArrayList<>();
 
     public Filme(String nome, long id) {
         this.nome = nome;
         this.id = id;
     }
 
-    public Filme(String nome, long id, List<Categoria> categorias) {
+    public Filme(String nome, long id, ArrayList<Categoria> categorias) {
         this(nome, id);
         this.categorias = categorias;
     }
@@ -42,11 +42,11 @@ public class Filme {
         this.id = id;
     }
 
-    public List<Categoria> getCategorias() {
+    public ArrayList<Categoria> getCategorias() {
         return categorias;
     }
 
-    public void setCategorias(List<Categoria> categorias) {
+    public void setCategorias(ArrayList<Categoria> categorias) {
         this.categorias = categorias;
     }
 

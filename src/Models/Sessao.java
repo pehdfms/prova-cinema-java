@@ -3,35 +3,23 @@ package Models;
 import java.time.Instant;
 
 public class Sessao {
-    private long id;
     private Filme filmeAssociado;
     private Instant horario;
+    private long id;
 
-    public Sessao(long id, Filme filmeAssociado) {
-        this.id = id;
+    public Sessao(Filme filmeAssociado, Instant horario, long id) {
         this.filmeAssociado = filmeAssociado;
-    }
-
-    public Sessao(long id, Filme filmeAssociado, Instant horario) {
-        this(id, filmeAssociado);
         this.horario = horario;
+        this.id = id;
     }
 
     @Override
     public String toString() {
         return "Sessao{" +
-                "id=" + id +
-                ", filmeAssociado=" + filmeAssociado +
+                "filmeAssociado=" + filmeAssociado +
                 ", horario=" + horario +
+                ", id=" + id +
                 '}';
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
     public Filme getFilmeAssociado() {
@@ -48,5 +36,13 @@ public class Sessao {
 
     public void setHorario(Instant horario) {
         this.horario = horario;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 }
